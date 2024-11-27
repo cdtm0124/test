@@ -56,8 +56,22 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.1.0</version> <!-- Ensure you are using a compatible version -->
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>org.example.Main</mainClass> <!-- Replace with your actual Main class -->
+				</configuration>
+			</plugin>
 		</plugins>
-
 		<finalName>${project.artifactId}</finalName>
 	</build>
 
